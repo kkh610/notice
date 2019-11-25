@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bookw"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나만의 독후감"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:text="글제목 : "
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/gtitle"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:text="책제목 : "
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/btitle"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:text="지은이 : "
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/write"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:text="장르"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:text="소설"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:layout_weight="1"
+                android:text="시/에세이"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:layout_weight="1"
+                android:text="자기계발"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:text="인문"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb5"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25sp"
+                android:layout_weight="1"
+                android:text="예술"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:text="내용"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/contect"
+            android:layout_width="367dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="25sp"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:maxLines="10"
+            android:minLines="4"
+            android:scrollbars="vertical" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:onClick="save"
+                android:text="저장" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="취소" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/lib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="lib"/>
+    </LinearLayout>
+
+
+</LinearLayout>
